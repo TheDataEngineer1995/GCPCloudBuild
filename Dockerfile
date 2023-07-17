@@ -1,3 +1,3 @@
 FROM alpine
-COPY testt.sh /
-CMD ["/test.sh"]
+COPY script.sh /
+CMD ["/script.sh"]
