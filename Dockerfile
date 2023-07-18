@@ -4,5 +4,5 @@ ENV PJID=$_PID
 COPY script.sh /
 RUN echo "The ENV variable value is $PJID"
 RUN chmod +x /script.sh
-ENTRYPOINT [/bin/bash]
+ENTRYPOINT [/bin/sh]
 CMD ["/script.sh","$PJID"]
