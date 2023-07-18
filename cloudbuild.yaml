@@ -1,11 +1,16 @@
-# steps:
+steps:
 - name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: [ '-c', "docker build -t gcr.io/${PROJECT_ID}/quickstart-docker-repo/test:tag1 --build-arg PRJ=${PROJECT_ID} --no-cache" ]
-  
+  args:
+  - 'build'
+  - '--tag=gcr.io/$PROJECT_ID/quickstart-docker-repo/test:tag1'
+  - '--build-arg=PRJ=${PROJECT_ID}'
+  - '.'
+
 images:
 - 'gcr.io/$PROJECT_ID/quickstart-docker-repo/test:tag1'
 
+
+# args: [ '-c', "docker build -t gcr.io/${PROJECT_ID}/quickstart-docker-repo/test:tag1 --build-arg PRJ=${PROJECT_ID} --no-cache" ]
 # [END cloudbuild_quickstart_build]
 
 # # steps:
