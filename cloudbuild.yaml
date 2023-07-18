@@ -25,5 +25,5 @@ images:
 # [END cloudbuild_quickstart_build]
 # # substitutions:
 # #   _PID: $PROJECT_ID
-# options:
-#   logging: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY
